@@ -37,7 +37,7 @@ class _PostsListState extends State<PostsList> {
       builder: (context, state) {
         switch (state.status) {
           case PostStatus.failure:
-            return const Center(child: Text('failed to fecth posts'));
+            return const Center(child: Text('failed to fetch posts'));
           case PostStatus.success:
             if (state.posts.isEmpty) {
               return const Center(child: Text('no posts'));

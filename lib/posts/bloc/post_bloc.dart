@@ -36,7 +36,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
   ) async {
     if (state.hasReachedMax) return;
     try {
-      if (state.status == PostStatus.inital) {
+      if (state.status == PostStatus.initial) {
         final posts = await _fetchPosts();
         return emit(state.copyWith(
           status: PostStatus.success,
